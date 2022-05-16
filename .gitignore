@@ -1,0 +1,5 @@
+ // node_modules
+
+DB_URL=mongodb+srv://Danwanaa94:mubeen2021@cluster0.qjlao.mongodb.net/restaurantAPI?retryWrites=true&w=majority
+
+PORT = 5000
