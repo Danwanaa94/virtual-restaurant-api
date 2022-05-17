@@ -17,6 +17,7 @@ function validateRestaurant(data) {
     rating: yup.string().required("rating required").min(2).max(20),
     contact: yup.string().required("contact required").min(2).max(20),
   });
+  //comment
   return restaurantSchema.validate(data);
 }
 
