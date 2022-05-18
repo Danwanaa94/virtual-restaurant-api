@@ -1,6 +1,6 @@
 const User = require("../models/userSchema");
 const bcrypt = require("bcrypt");
-const { validate } = require("../config/Validator");
+const { validate } = require("../config/validator");
 
 //ADDING A USER
 
