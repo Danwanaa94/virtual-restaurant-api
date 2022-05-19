@@ -9,19 +9,20 @@ const newUser = async (req, res) => {
   const valid = await validate({ username, email, password });
   if (valid) {
     const hashedPassword = await bcrypt.hash(valid.password, 8);
-    const newUser = new User({
+    const savedUser = await User.create({
       username,
       email,
       password: hashedPassword,
     });
 
-    const savedUser = await newUser.save();
     res.status(201).json({
+      success: true,
       message: "user created",
       savedUser,
     });
   } else {
     res.status(400).json({
+      error: true,
       message: "Invalid data",
     });
   }
